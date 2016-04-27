@@ -19,3 +19,4 @@ $ ZookKeeper.pl /var/log/apache2/access.log ~/Zoo/
 - network error handleing
 - ignore local ip requests
 - ignore baiting links
+- automatic folder creation
