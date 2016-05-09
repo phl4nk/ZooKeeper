@@ -26,9 +26,8 @@ sub findCallBack(){
 
 sub handleResource($){
 	my $log = shift;
-	my $suffix = substr($resource,rindex($resource,'/')+1,length $resource);
 	mkdir "$ARGV[1]$i";
-	my $return_code = getstore($resource,"$ARGV[1]$i/$suffix");
+	my $return_code = getstore($resource,"$ARGV[1]$i/file");
 	print "[+] File download returned with: $return_code\n";
 	open(LOG, ">>$ARGV[1]$i/log.txt") or warn "[!] Error: $! ";
 	print LOG $log;
