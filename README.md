@@ -4,14 +4,15 @@ Continuously monitor a file to watch for any (potentially malicious) URIs. Attem
 
 ### Usage
 
-`ZooKeeper.pl <log_file> <zoo_folder>`
+`zookeeper.py <log_file> <zoo_folder>`
 
 #### Example
 ```sh
-$ ZookKeeper.pl /var/log/apache2/access.log ~/Zoo/
-[+] Zookeeper initiated
-[+] Resource found: https://attacker.net/xxx/xzy/0day.zip
-[+] File download returned with: 200
+$ ./zookeeper.py /var/log/apache2/access.log ~/Zoo/
+[+] Starting to watch Log file: /var/log/apache2/access.log
+[!] Duplicate link, not re-downloading
+[+] Attempting to download: https://attacker.net/xxx/xzy/0day.zip
+[+] Saving resource 
 ```
 
 ### TODO
